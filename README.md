@@ -23,3 +23,5 @@ Linking to the Jenkins master container there is no need to use `-master`
 
 When running be sure to pass relevant `-labels` options to manage what types of
 build will be serviced.
+
+[![](https://images.microbadger.com/badges/image/amissemer/jenkins-swarm-slave-with-docker.svg)](https://microbadger.com/images/amissemer/jenkins-swarm-slave-with-docker "Get your own image badge on microbadger.com")
