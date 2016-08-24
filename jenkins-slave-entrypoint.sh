@@ -11,9 +11,7 @@ if [[ $# -lt 1 ]] || [[ "$1" == "-"* ]]; then
     PARAMS="-master http://$JENKINS_PORT_8080_TCP_ADDR:$JENKINS_PORT_8080_TCP_PORT"
   fi
 
-  CMD="java $JAVA_OPTS -jar $JAR -fsroot $JENKINS_SLAVE_HOME $PARAMS $@"
-  echo "Running $CMD"
-  exec "$CMD"
+  exec java $JAVA_OPTS -jar $JAR -fsroot $JENKINS_SLAVE_HOME $PARAMS "$@"
 fi
 
 # As argument is not jenkins, assume user want to run his own process, for sample a `bash` shell to explore this image
