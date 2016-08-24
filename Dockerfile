@@ -2,15 +2,14 @@ FROM openjdk:8-jdk
 
 MAINTAINER Adrien Missemer <adrien.missemer@gmail.com>
 
-ENV JENKINS_SWARM_VERSION 1.22
+ENV JENKINS_SWARM_VERSION 2.2
 ENV JENKINS_SLAVE_HOME /var/lib/jenkins_slave
-ENV JENKINS_JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 
 VOLUME $JENKINS_SLAVE_HOME
 
 RUN curl --create-dirs -sSLo \
     /usr/share/jenkins/swarm-client-$JENKINS_SWARM_VERSION-jar-with-dependencies.jar \
-    http://maven.jenkins-ci.org/content/repositories/releases/org/jenkins-ci/plugins/swarm-client/$JENKINS_SWARM_VERSION/swarm-client-$JENKINS_SWARM_VERSION-jar-with-dependencies.jar && \
+    http://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/$JENKINS_SWARM_VERSION/swarm-client-$JENKINS_SWARM_VERSION-jar-with-dependencies.jar && \
     chmod 755 /usr/share/jenkins
 
 # grab tini for signal processing and zombie killing
