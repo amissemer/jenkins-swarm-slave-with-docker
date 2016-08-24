@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y apt-transport-https ca-certificates \
     && echo deb https://apt.dockerproject.org/repo debian-jessie main > /etc/apt/sources.list.d/docker.list \
     && apt-get update \
     && apt-get install -y docker-engine \
-    && apt-get -q clean -y && rm -rf /var/lib/apt/lists/* && rm -f /var/cache/apt/*.bin
+    && rm -rf /var/lib/apt/lists/*
 
 #
 # Swarm install
