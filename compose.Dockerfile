@@ -46,6 +46,6 @@ RUN set -x \
 
 VOLUME $JENKINS_SLAVE_HOME
 
-COPY jenkins-slave-entrypoint.sh /
+COPY jenkins-slave-entrypoint.sh /usr/local/bin/
 # Use tini as subreaper in Docker container to adopt zombie processes 
-ENTRYPOINT ["tini", "--", "/jenkins-slave-entrypoint.sh"]
+ENTRYPOINT ["tini", "--", "jenkins-slave-entrypoint.sh"]
