@@ -3,7 +3,7 @@
 Based on [`aratto/jenkins-swarm-slave`](https://hub.docker.com/r/aratto/jenkins-swarm-slave/).
 
 An extendable [Jenkins swarm](https://wiki.jenkins-ci.org/display/JENKINS/Swarm+Plugin)
-slave base to work with a [Jenkins master](https://hub.docker.com/r/amissemer/git-sync-jenkins/) with the Swarm plugin enabled, and Docker CLI installed.
+slave base to work with a [Jenkins master](https://hub.docker.com/r/amissemer/git-sync-jenkins/) with the Swarm plugin enabled, and Docker CLI, and Docker Compose (in the -compose variant) installed.
 
 ## Running
 
